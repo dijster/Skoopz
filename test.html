@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skoopz - Sweet Treats & Coffee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #db2777;
+            padding: 1rem;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+
+        .nav-links a:hover {
+            color: #fdf2f8;
+        }
+
+        .hero {
+            background: linear-gradient(to bottom, #fdf2f8, #ffffff);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: #831843;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: #db2777;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: #db2777;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #be185d;
+        }
+
+        .menu-section {
+            padding: 4rem 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .menu-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-category h3 {
+            color: #db2777;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f3f3f3;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item-header h4 {
+            color: #4b5563;
+        }
+
+        .price {
+            color: #db2777;
+        }
+
+        .description {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .contact {
+            background-color: #fdf2f8;
+            padding: 4rem 0;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info h3 {
+            color: #db2777;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #db2777;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Skoopz</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Sweet Treats & Coffee</h1>
+            <p>Indulge in our handcrafted milkshakes, cakes, and coffee</p>
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h3>Milkshakes</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Classic Vanilla</h4>
+                            <span class="price">$5.99</span>
+                        </div>
+                        <p class="description">Creamy vanilla ice cream blended to perfection</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Chocolate Dream</h4>
+                            <span class="price">$6.49</span>
+                        </div>
+                        <p class="description">Rich chocolate ice cream with chocolate sauce</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Strawberry Fields</h4>
+                            <span class="price">$6.49</span>
+                        </div>
+                        <p class="description">Fresh strawberries blended with vanilla ice cream</p>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3>Cakes</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Red Velvet</h4>
+                            <span class="price">$4.99/slice</span>
+                        </div>
+                        <p class="description">Classic red velvet with cream cheese frosting</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Chocolate Fudge</h4>
+                            <span class="price">$4.99/slice</span>
+                        </div>
+                        <p class="description">Dense chocolate cake with fudge frosting</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Carrot Cake</h4>
+                            <span class="price">$4.99/slice</span>
+                        </div>
+                        <p class="description">Spiced carrot cake with cream cheese frosting</p>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3>Coffee</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Espresso</h4>
+                            <span class="price">$2.99</span>
+                        </div>
+                        <p class="description">Single shot of our premium blend</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Cappuccino</h4>
+                            <span class="price">$4.49</span>
+                        </div>
+                        <p class="description">Espresso topped with steamed milk and foam</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4>Latte</h4>
+                            <span class="price">$4.49</span>
+                        </div>
+                        <p class="description">Smooth espresso with steamed milk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h3>Location</h3>
+                    <p>123 Sweet Street, Dessert Town</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Phone</h3>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Hours</h3>
+                    <p>Mon-Sat: 8am - 9pm</p>
+                    <p>Sun: 9am - 8pm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Skoopz. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
